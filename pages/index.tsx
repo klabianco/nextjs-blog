@@ -42,7 +42,7 @@ export default function Home({
       </Head>
       <section className={utilStyles.headingMd}>
       <p>Hi I'm Kevin, a software engineer getting into the web3 space.  Find me on twitter <a href="https://twitter.com/klabianco" target="_blank">@klabianco</a> I'm also on <a href='https://opensea.io/kevinl' target='_blank'>opensea</a>.</p><br></br>
-      <p mt={5}>This site uses <a href="https://chakra-ui.com/" target="_blank">ChakraUI</a></p>
+      <p>This site uses <a href="https://chakra-ui.com/" target="_blank">ChakraUI</a></p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
