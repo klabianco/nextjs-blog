@@ -9,6 +9,7 @@ import { Button } from '@chakra-ui/react'
 import { FaTwitter } from 'react-icons/fa';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
+// gm world
 
 export default function Home({
   allPostsData
@@ -25,7 +26,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd} style={{textAlign: 'center'}}>
-        <p>GM! I'm Kevin, a software engineer in the web3 space focusing on react, typescript, and solidity smart contracts. Also experienced w/ Polygon, Graph, and IPFS/Piñata.<br/><br /> Shoot me a tweet and let's buidl!</p>
+        <p>GM! I'm Kevin, a software engineer in the web3 space focusing on react, typescript, and solidity smart contracts. Also experienced w/ Polygon, The Graph, and IPFS/Piñata stack.<br/><br /> Shoot me a tweet and let's buidl!</p>
       </section>
       <section>
       <TwitterTimelineEmbed
