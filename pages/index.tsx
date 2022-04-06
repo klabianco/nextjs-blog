@@ -24,8 +24,8 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>GM! I'm Kevin, a software engineer in the web3 space focusing on react, typescript, and solidity smart contracts. Also experienced w/ Polygon, Graph, and IPFS/Piñata.<br/><br /> Let's buidl!</p>
+      <section className={utilStyles.headingMd} style={{textAlign: 'center'}}>
+        <p>GM! I'm Kevin, a software engineer in the web3 space focusing on react, typescript, and solidity smart contracts. Also experienced w/ Polygon, Graph, and IPFS/Piñata.<br/><br /> Shoot me a tweet and let's buidl!</p>
       </section>
       <section className={utilStyles.headingMD} style={{marginTop: 10 + 'px'}}>
         <a href='https://twitter.com/klabianco' target="_blank">
