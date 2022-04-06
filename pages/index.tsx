@@ -29,7 +29,7 @@ export default function Home({
       </section>
       <section className={utilStyles.headingMD} style={{marginTop: 10 + 'px'}}>
         <a href='https://twitter.com/klabianco' target="_blank">
-        <Button colorScheme='twitter' leftIcon={<FaTwitter />} isFullWidth='true'>
+        <Button colorScheme='twitter' leftIcon={<FaTwitter />} w='100%'>
     Twitter
   </Button>
         </a>
