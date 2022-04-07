@@ -52,7 +52,22 @@ export default function Layout({
             content={pfp}
           />
           <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-MNY9WX904K"
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MNY9WX904K', { page_path: window.location.pathname });
+            `,
+            }}
+          />
         </Head>
         <header className={styles.header}>
           {home ? (

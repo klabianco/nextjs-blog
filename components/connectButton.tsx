@@ -1,25 +1,25 @@
 // ConnectButton.tsx
 import { Button, Box, Text } from "@chakra-ui/react";
 import { useEthers, useEtherBalance } from "@usedapp/core";
+import { formatEther } from "@ethersproject/units";
 
 export default function ConnectButton() {
-    const {activateBrowserWallet, account } = useEthers();
+    const { activateBrowserWallet, account } = useEthers();
     const etherBalance = useEtherBalance(account);
 
     function handleConnectWallet() {
         activateBrowserWallet();
-      }
-    
-      return account ? (
+    }
+
+    return account ? (
         <Box>
-          <Text color="black" fontSize="md">
-            // etherBalance will be an object, so we stringify it 
-            {etherBalance && JSON.stringify(etherBalance)} ETH
-          </Text>
+            <Text color="black" fontSize="md">
+                {etherBalance && parseFloat(formatEther(etherBalance)).toFixed(3)} ETH
+            </Text>
         </Box>
-      ) : (
+    ) : (
         <Button onClick={handleConnectWallet}>
-          Connect to a wallet
+            Connect to a wallet
         </Button>
-      );
-  }
+    );
+}
