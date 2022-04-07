@@ -8,6 +8,8 @@ import { GetStaticProps } from 'next'
 import { Button } from '@chakra-ui/react'
 import { FaTwitter } from 'react-icons/fa';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+//import ConnectButton from '../components/connectButton'
+import { DAppProvider } from "@usedapp/core";
 
 // gm world
 
@@ -21,14 +23,14 @@ export default function Home({
   }[]
 }) {
   return (
+    <DAppProvider config={{}}>
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd} style={{textAlign: 'center'}}>
-        <p>GM! I'm Kevin, a software engineer in the web3 space focusing on react, typescript, and solidity smart contracts. Also experienced w/ Polygon, The Graph, and IPFS/Piñata stack.<br/><br /> Shoot me a tweet and let's buidl!</p>
-      </section>
-      <section>
+        <p>GM 👋 I'm Kevin -- a software engineer (web1/2 since I was a kid) who's now in the web3 space and loving it! 😊<br />Focusing on <a href="https://reactjs.org/" target="_blank">React</a>, <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>, and <a href="https://soliditylang.org/" target="_blank">Solidity</a> and related tech.<br/>Also experienced w/ <a href="https://polygon.technology/" target="_blank">Polygon</a>, <a href="https://thegraph.com/en/" target="_blank">The Graph</a>, and <a href="https://pinata.cloud/" target="_blank">IPFS/Piñata</a>.<br/><br /> Shoot me a tweet and let's buidl!</p>
+    
       <TwitterTimelineEmbed
   sourceType="profile"
   screenName="klabianco"
@@ -44,6 +46,7 @@ export default function Home({
       </section>
 
     </Layout>
+    </DAppProvider>
   )
 }
 

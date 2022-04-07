@@ -25,10 +25,10 @@ const theme = extendTheme({
 })
 
 const name = 'Kevin Labianco'
-export const siteTitle = 'Kevin Labianco - Web3 Software Engineer'
-
-const pfp = () => {
-  return 'https://pbs.twimg.com/profile_images/1510080932060942349/ggNHijDH_400x400.jpg';
+export const siteTitle = '👋 Kevin Labianco - Web3 Software Engineer'
+const pfp = 'https://pbs.twimg.com/profile_images/1510080932060942349/ggNHijDH_400x400.jpg';
+const pfpImg = () => {
+  return pfp;
 }
 
 export default function Layout({
@@ -49,7 +49,7 @@ export default function Layout({
           />
           <meta
             property="og:image"
-            content="{pfp}"
+            content={pfp}
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@ export default function Layout({
           {home ? (
             <>
               <Image
-                loader={pfp}
+                loader={pfpImg}
                 src="me.png"
                 className={utilStyles.borderCircle}
                 height={144}
@@ -72,7 +72,7 @@ export default function Layout({
               <Link href="/">
                 <a>
                   <Image
-                    loader={pfp}
+                    loader={pfpImg}
                     src="me.png"
                     className={utilStyles.borderCircle}
                     height={108}
